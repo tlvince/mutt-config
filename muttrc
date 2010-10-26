@@ -12,6 +12,7 @@ unset confirmappend                                             # don't ask, jus
   set delete                                                    # don't ask, just do
 unset markers                                                   # no ugly plus signs
 unset mark_old                                                  # read/new is good enough for me
+unset move
   set menu_scroll                                               # scroll in menus
   set pager_index_lines   = 10                                  # number of index lines to show
   set pager_context       = 5                                   # number of context lines to show
@@ -35,9 +36,10 @@ alternative_order text/plain text/enriched text/html            # but save it fo
   set index_format        = "%3C %Z %[!%m/%d] %-17.17F %s"
   set quote_regexp        = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
   set reply_regexp        = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
-  set status_format       = "[%f %m%?n? [+%n]?%?d? [-%d]?%?t? [*%t]?]%?p?───[%p drafts]?─%>─(%P)───"
+  set status_format       = "(%f %m%?n? [+%n]?%?d? [-%d]?%?t? [*%t]?)%?p?───(%p draft)?─%>─(%P)───"
 
 # composing mail
+  set editor              = "vim -c 'set tw=72 spell' '+/^$' "
   set edit_headers                                              # show headers when composing
   set fast_reply                                                # skip to compose when replying
   set forward_format      = "Fwd: %s"                           # format for subject when forwarding
