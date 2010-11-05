@@ -1,0 +1,4 @@
+text/html;                      $BROWSER %s
+text/plain;                     vim %s
+image/jpeg;                     viewnior %s
+audio/mpeg;                     mplayer %s
