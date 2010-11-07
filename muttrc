@@ -6,7 +6,7 @@
   set mailcap_path        = ~/.config/mutt/mailcap              # mime handlers
   set editor              = "vim +:silent+?^$"                  # use vim and skip to last blank line
   set ispell              = "aspell -e -c"                      # use aspell as ispell
-  set query_command       = "abook --mutt-query '%s'"           # query abook for contacts
+  set query_command       = "goobook query '%s'"           # query abook for contacts
 
 # Main options
 unset confirmappend                                             # don't ask, just do
@@ -55,7 +55,7 @@ unignore from: to: cc: date: subject:                           # show only thes
 hdr_order from: to: cc: date: subject:                          # and in this order
 
 
-# these just give me headaches
+# Unbind (noop special ubind function)
 bind index,pager \#   noop
 bind index,pager \&   noop
 bind index i          noop
@@ -77,6 +77,9 @@ bind pager J          next-undeleted
 bind index K          previous-unread
 bind index J          next-unread
 bind index,pager R    group-reply
+
+bind editor <Tab>     complete-query    # Tab complete addresses
+bind editor ^T        complete          # Tab complete file names
 
 # macros
 macro index h   "c?" "view folders"
