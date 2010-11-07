@@ -59,6 +59,7 @@ hdr_order from: to: cc: date: subject:                          # and in this or
 bind index,pager \#   noop
 bind index,pager \&   noop
 bind index i          noop
+bind editor <space>   noop              # Stop weird auto-completing
 
 # bindings -- very vim-like
 bind pager i          exit
