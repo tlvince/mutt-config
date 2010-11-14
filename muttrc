@@ -4,11 +4,10 @@
   set message_cachedir    = ~/.cache/mutt/bodies                # where to store bodies
   set tmpdir              = ~/.cache/mutt/tmp                   # where to keep temp files
   set mailcap_path        = ~/.config/mutt/mailcap              # mime handlers
-  set editor              = "vim +:silent+?^$"                  # use vim and skip to last blank line
   set ispell              = "aspell -e -c"                      # use aspell as ispell
   set query_command       = "goobook query '%s'"           # query abook for contacts
   set mbox_type           = Maildir
-  set folder              = /media/usbhd-sdb1/home/tom/mail
+  set folder              = /media/ears/home/tom/mail
 
 # Main options
 unset confirmappend                                             # don't ask, just do
