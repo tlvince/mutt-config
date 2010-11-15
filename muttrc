@@ -41,7 +41,7 @@ alternative_order text/plain text/enriched text/html            # but save it fo
   set status_format       = "(%f %m%?n? [+%n]?%?d? [-%d]?%?t? [*%t]?)%?p?───(%p draft)?─%>─(%P)───"
 
 # composing mail
-  set editor              = "vim -c 'set tw=72 spell' '+/^$' "
+  set editor              = "vim -c 'set tw=72 spell' '+/^$'"
   set edit_headers                                              # show headers when composing
   set fast_reply                                                # skip to compose when replying
   set forward_format      = "Fwd: %s"                           # format for subject when forwarding
@@ -83,6 +83,7 @@ bind index,pager R    group-reply
 bind editor <Tab>     complete-query    # Tab complete addresses
 bind editor ^T        complete          # Tab complete file names
 
+
 # macros
 macro index h   "c?" "view folders"
 macro index \Cr "<tag-pattern>all<enter><tag-prefix><clear-flag>N<untag-pattern>all<enter>" "mark all as read"
@@ -91,11 +92,17 @@ macro index I   "<change-folder>!<enter>" "go to Inbox"
 macro index P   "<pipe-message>cat > ~/" "save message as"
 macro index Z   "<shell-escape>offlineimap -c ~/.config/offlineimap/offlineimap.conf -q -o<return>" "sync IMAP"
 
+macro index,pager <F9> "<change-folder>+gmail/inbox<enter>" "Go to GMail inbox"
+macro index,pager <F10> "<change-folder>+cityu/inbox<enter>" "Go to CityU inbox"
+
 # abook support
 macro generic,index,pager \Ca "<shell-escape>abook<return>" "launch abook"
 macro index,pager         A   "<pipe-message>abook --add-email<return>" "add sender to abook"
 
 # Imports
 source ~/.config/mutt/zenburn.muttrc
-#source ~/.config/mutt/sidebar.muttrc
-source ~/.config/mutt/gmail.muttrc
+source ~/.config/mutt/gmail.muttrc      # Gmail by default
+
+# If mailbox is changed, load account specific settings
+folder-hook gmail/* source ~/.config/mutt/gmail.muttrc
+folder-hook cityu/* source ~/.config/mutt/cityu.muttrc
