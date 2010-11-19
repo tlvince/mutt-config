@@ -1,4 +1,5 @@
-text/html;                      $BROWSER %s
-text/plain;                     $EDITOR %s
-image/jpeg;                     viewnior %s
-audio/mpeg;                     mplayer %s
+text/plain;     $EDITOR %s
+image/jpeg;     viewnior %s
+audio/mpeg;     mplayer %s
+text/html;      links %s; nametemplate=%s.html
+text/html;      links -dump %s; nametemplate=%s.html; copiousoutput

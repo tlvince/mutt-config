@@ -94,6 +94,7 @@ macro index Z   "<shell-escape>offlineimap -c ~/.config/offlineimap/offlineimap.
 
 macro index,pager <F9> "<change-folder>+gmail/inbox<enter>" "Go to GMail inbox"
 macro index,pager <F10> "<change-folder>+cityu/inbox<enter>" "Go to CityU inbox"
+macro index,pager <F11> "<change-folder>+kent/inbox<enter>" "Go to Kent inbox"
 
 # abook support
 macro generic,index,pager \Ca "<shell-escape>abook<return>" "launch abook"
@@ -106,3 +107,4 @@ source ~/.config/mutt/gmail.muttrc      # Gmail by default
 # If mailbox is changed, load account specific settings
 folder-hook gmail/* source ~/.config/mutt/gmail.muttrc
 folder-hook cityu/* source ~/.config/mutt/cityu.muttrc
+folder-hook kent/* source ~/.config/mutt/kent.muttrc
