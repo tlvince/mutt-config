@@ -7,7 +7,7 @@
   set ispell              = "aspell -e -c"                      # use aspell as ispell
   set query_command       = "goobook query '%s'"           # query abook for contacts
   set mbox_type           = Maildir
-  set folder              = /media/ears/home/tom/mail
+  set folder              = /media/ears/mail
 
 # Main options
 unset confirmappend                                             # don't ask, just do
@@ -101,7 +101,8 @@ macro generic,index,pager \Ca "<shell-escape>abook<return>" "launch abook"
 macro index,pager         A   "<pipe-message>abook --add-email<return>" "add sender to abook"
 
 # Imports
-source ~/.config/mutt/zenburn.muttrc
+#source ~/.config/mutt/zenburn.muttrc
+source ~/.config/mutt/lightr.muttrc
 source ~/.config/mutt/gmail.muttrc      # Gmail by default
 
 # If mailbox is changed, load account specific settings
