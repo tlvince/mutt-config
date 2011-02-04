@@ -41,7 +41,7 @@ alternative_order text/plain text/enriched text/html            # but save it fo
   set status_format       = "(%f %m%?n? [+%n]?%?d? [-%d]?%?t? [*%t]?)%?p?───(%p draft)?─%>─(%P)───"
 
 # composing mail
-  set editor              = "vim -c 'set tw=72 spell' '+/^$'"
+  set editor              = "vim -c 'set tw=72 spell' '+/^$' '+:noh'"
   set edit_headers                                              # show headers when composing
   set fast_reply                                                # skip to compose when replying
   set forward_format      = "Fwd: %s"                           # format for subject when forwarding
@@ -95,13 +95,13 @@ macro index Z   "<shell-escape>offlineimap -c ~/.config/offlineimap/offlineimap.
 macro index,pager <F9> "<change-folder>+gmail/inbox<enter>" "Go to GMail inbox"
 macro index,pager <F10> "<change-folder>+cityu/inbox<enter>" "Go to CityU inbox"
 macro index,pager <F11> "<change-folder>+kent/inbox<enter>" "Go to Kent inbox"
+macro index,pager <F12> "<change-folder>+tlvince/inbox<enter>" "Go to tlvince inbox"
 
 # abook support
 macro generic,index,pager \Ca "<shell-escape>abook<return>" "launch abook"
 macro index,pager         A   "<pipe-message>abook --add-email<return>" "add sender to abook"
 
 # Imports
-#source ~/.config/mutt/zenburn.muttrc
 source ~/.config/mutt/lightr.muttrc
 source ~/.config/mutt/gmail.muttrc      # Gmail by default
 
@@ -109,3 +109,4 @@ source ~/.config/mutt/gmail.muttrc      # Gmail by default
 folder-hook gmail/* source ~/.config/mutt/gmail.muttrc
 folder-hook cityu/* source ~/.config/mutt/cityu.muttrc
 folder-hook kent/* source ~/.config/mutt/kent.muttrc
+folder-hook tlvince/* source ~/.config/mutt/tlvince.muttrc
