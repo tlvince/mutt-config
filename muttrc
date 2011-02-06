@@ -95,7 +95,6 @@ macro index Z   "<shell-escape>offlineimap -c ~/.config/offlineimap/offlineimap.
 macro index,pager <F9> "<change-folder>+gmail/inbox<enter>" "Go to GMail inbox"
 macro index,pager <F10> "<change-folder>+cityu/inbox<enter>" "Go to CityU inbox"
 macro index,pager <F11> "<change-folder>+kent/inbox<enter>" "Go to Kent inbox"
-macro index,pager <F12> "<change-folder>+tlvince/inbox<enter>" "Go to tlvince inbox"
 
 # abook support
 macro generic,index,pager \Ca "<shell-escape>abook<return>" "launch abook"
@@ -109,4 +108,3 @@ source ~/.config/mutt/gmail.muttrc      # Gmail by default
 folder-hook gmail/* source ~/.config/mutt/gmail.muttrc
 folder-hook cityu/* source ~/.config/mutt/cityu.muttrc
 folder-hook kent/* source ~/.config/mutt/kent.muttrc
-folder-hook tlvince/* source ~/.config/mutt/tlvince.muttrc
