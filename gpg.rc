@@ -1,6 +1,3 @@
-# replace 0x7ED573D3 with your gnupg private key ID
-set pgp_sign_as = 0x7ED573D3
-
 set pgp_decode_command = "gpg %?p?--passphrase-fd 0? --no-verbose --batch --output - %f"
 set pgp_verify_command = "gpg --no-verbose --batch --output - --verify %s %f"
 set pgp_decrypt_command = "gpg --passphrase-fd 0 --no-verbose --batch --output - %f"
@@ -24,18 +21,3 @@ set pgp_replysignencrypted = yes
 set pgp_strict_enc = yes
 set pgp_verify_sig = yes
 set pgp_auto_decode = yes
-
-#set pgp_good_sign="^gpg: Good signature from"
-#set pgp_decode_command="gpg %?p?--passphrase-fd 0? --no-verbose --batch -o - %f"
-##set pgp_getkeys_command = 
-#set pgp_verify_command="gpg --no-verbose --batch -o - --verify %s %f"
-#set pgp_decrypt_command="gpg --passphrase-fd 0 --no-verbose --batch -o - %f"
-#set pgp_clearsign_command="gpg --no-verbose --batch -o - --passphrase-fd 0 -a -t --clearsign %?a?-u %a? %f"
-#set pgp_sign_command = "gpg -a --clearsign -o - %f"
-#set pgp_encrypt_sign_command="pgpewrap gpg --passphrase-fd 0 --batch -q --no-verbose -t -o - -e -s %?a?-u %a? -a --encrypt-to 0x%a -- -r %r -- %f"
-#set pgp_sign_command = "gpg --no-verbose --batch -o - --passphrase-fd 0 -a --detach-sign -t %?a?-u %a? %f"
-#set pgp_encrypt_only_command="pgpewrap gpg --batch -q --no-verbose -o - -e -t -a --encrypt-to 0x%a -- -r %r -- %f"
-#set pgp_import_command="gpg --no-verbose --import -v %f"
-#set pgp_export_command="gpg --no-verbose --export -a %r"
-#set pgp_verify_key_command="gpg --no-verbose --batch --fingerprint --check-sigs %r"
-#set pgp_list_pubring_command="gpg --no-verbose --batch --with-colons -k %r"
