@@ -1,3 +1,8 @@
+# GPG configuration for mutt.
+# See: http://wiki.mutt.org/?MuttGuide/UseGPG
+# vim: set ft=muttrc tw=0:
+
+# Replace this with your key ID
 set pgp_sign_as=0x26E0CA03
 
 set pgp_decode_command = "gpg --no-verbose --batch --output - %f"
