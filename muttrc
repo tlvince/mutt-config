@@ -41,7 +41,8 @@ alternative_order text/plain text/enriched text/html            # but save it fo
   set status_format       = "(%f %m%?n? [+%n]?%?d? [-%d]?%?t? [*%t]?)%?p?───(%p draft)?─%>─(%P)───"
 
 # composing mail
-  set editor              = "vim -c 'set tw=72 spell' '+/^$' '+:noh'"
+  # Launch vim, moving to the first empty line and hard-wrapping lines at 72 columns
+  set editor              = "gvim -f -c 'set tw=72 spell' '+/^$' '+norm gwG' '+:noh'"
   set edit_headers                                              # show headers when composing
   set fast_reply                                                # skip to compose when replying
   set forward_format      = "Fwd: %s"                           # format for subject when forwarding
