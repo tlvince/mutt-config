@@ -1,5 +1,6 @@
-text/plain;     $EDITOR %s
-image/jpeg;     viewnior %s
-audio/mpeg;     mplayer %s
-text/html;      links %s; nametemplate=%s.html
-text/html;      links -dump %s; nametemplate=%s.html; copiousoutput
+text/plain; $EDITOR %s
+image/*;    feh %s
+audio/*;    mplayer %s
+text/html;  links %s; nametemplate=%s.html
+text/html;  links -dump %s; nametemplate=%s.html; copiousoutput
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; libreoffice %s
