@@ -1,7 +1,5 @@
 # Environment
-  set certificate_file    = ~/.cache/mutt/certificates          # where to store certs
   set header_cache        = ~/.cache/mutt/headers               # where to store headers
-  set message_cachedir    = ~/.cache/mutt/bodies                # where to store bodies
   set tmpdir              = ~/.cache/mutt/tmp                   # where to keep temp files
   set mailcap_path        = ~/.config/mutt/mailcap              # mime handlers
   set ispell              = "aspell -e -c"                      # use aspell as ispell
@@ -28,6 +26,7 @@ unset sort_re                                                   # always thread
   set thread_received                                           # sort threads by date received, not sent
   set tilde                                                     # show tildes like in vim
 
+  set sendmail_wait = -1    # Background sendmail without waiting
 # Enriched messages
 auto_view text/html                                             # view html automatically
 alternative_order text/plain text/enriched text/html            # but save it for last
@@ -92,6 +91,7 @@ macro index B   "<limit>~b " "search message bodies"
 macro index I   "<change-folder>!<enter>" "go to Inbox"
 macro index P   "<pipe-message>cat > ~/" "save message as"
 macro index Z   "<shell-escape>offlineimap -c ~/.config/offlineimap/offlineimap.conf -q -o<return>" "sync IMAP"
+macro attach s  "<save-entry><bol>~/dwn/unsorted/" "default attachments path"
 
 macro index,pager <F9> "<change-folder>+gmail/inbox<enter>" "Go to GMail inbox"
 macro index,pager <F10> "<change-folder>+cityu/inbox<enter>" "Go to CityU inbox"
