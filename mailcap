@@ -4,3 +4,4 @@ audio/*;    mplayer %s
 text/html;  links %s; nametemplate=%s.html
 text/html;  links -dump %s; nametemplate=%s.html; copiousoutput
 application/vnd.openxmlformats-officedocument.wordprocessingml.document; libreoffice %s
+application/pdf; zathura %s
