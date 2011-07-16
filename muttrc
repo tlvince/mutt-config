@@ -41,7 +41,7 @@ alternative_order text/plain text/enriched text/html            # but save it fo
 
 # composing mail
   # Launch vim, moving to the first empty line and hard-wrapping lines at 72 columns
-  set editor              = "gvim -f -c 'set tw=72 spell' '+/^$' '+norm gwG' '+:noh'"
+  set editor              = "vim -f -c 'set tw=72 spell' '+/^$' '+norm gwG' '+:noh'"
   set edit_headers                                              # show headers when composing
   set fast_reply                                                # skip to compose when replying
   set forward_format      = "Fwd: %s"                           # format for subject when forwarding
@@ -96,6 +96,7 @@ macro attach s  "<save-entry><bol>~/dwn/unsorted/" "default attachments path"
 macro index,pager <F9> "<change-folder>+gmail/inbox<enter>" "Go to GMail inbox"
 macro index,pager <F10> "<change-folder>+cityu/inbox<enter>" "Go to CityU inbox"
 macro index,pager <F11> "<change-folder>+kent/inbox<enter>" "Go to Kent inbox"
+macro index,pager <F12> "<change-folder>+tlvince/inbox<enter>" "Go to tlvince inbox"
 
 # abook support
 macro generic,index,pager \Ca "<shell-escape>abook<return>" "launch abook"
@@ -110,3 +111,4 @@ source ~/.config/mutt/gpg.muttrc
 folder-hook gmail/* source ~/.config/mutt/gmail.muttrc
 folder-hook cityu/* source ~/.config/mutt/cityu.muttrc
 folder-hook kent/* source ~/.config/mutt/kent.muttrc
+folder-hook tlvince/* source ~/.config/mutt/tlvince.muttrc
