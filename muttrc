@@ -42,7 +42,13 @@ alternative_order text/plain text/enriched text/html            # but save it fo
 # composing mail
   # Launch vim, moving to the first empty line and hard-wrapping lines at 72 columns
   set editor              = "vim -f -c 'set tw=72 spell' '+/^$' '+norm gwG' '+:noh'"
+
+  # http://wiki.mutt.org/?MuttFaq/Header
   set edit_headers                                              # show headers when composing
+  # Force sendmail to use the same from address as the header
+  # Must be set up as a 'send mail as' identity in Gmail
+  set use_envelope_from   = yes
+
   set fast_reply                                                # skip to compose when replying
   set forward_format      = "Fwd: %s"                           # format for subject when forwarding
   set forward_quote                                             # include message in forwards
