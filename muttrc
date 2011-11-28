@@ -2,6 +2,7 @@
   set header_cache        = ~/.cache/mutt/headers               # where to store headers
   set tmpdir              = ~/.cache/mutt/tmp                   # where to keep temp files
   set mailcap_path        = ~/.config/mutt/mailcap              # mime handlers
+  set alias_file          = ~/.local/share/mutt/aliases
   set ispell              = "aspell -e -c"                      # use aspell as ispell
   set query_command       = "goobook query '%s'"           # query abook for contacts
   set mbox_type           = Maildir
@@ -112,6 +113,8 @@ macro index,pager         A   "<pipe-message>abook --add-email<return>" "add sen
 source ~/.config/mutt/lightr.muttrc
 source ~/.config/mutt/gmail.muttrc      # Gmail by default
 source ~/.config/mutt/gpg.muttrc
+source ~/.config/mutt/gpg-ruleset.muttrc
+source ~/.local/share/mutt/aliases
 
 # If mailbox is changed, load account specific settings
 folder-hook gmail/* source ~/.config/mutt/gmail.muttrc
