@@ -6,7 +6,7 @@
   set ispell              = "aspell -e -c"                      # use aspell as ispell
   set query_command       = "goobook query '%s'"           # query abook for contacts
   set mbox_type           = Maildir
-  set folder              = /media/ears/mail
+  set folder              = /home/tom/dwn/mail
 
 # Main options
 unset confirmappend                                             # don't ask, just do
@@ -103,6 +103,7 @@ macro attach s  "<save-entry><bol>~/dwn/unsorted/" "default attachments path"
 macro index,pager <F9> "<change-folder>+gmail/inbox<enter>" "Go to GMail inbox"
 macro index,pager <F10> "<change-folder>+kent/inbox<enter>" "Go to Kent inbox"
 macro index,pager <F11> "<change-folder>+tlvince/inbox<enter>" "Go to tlvince inbox"
+macro index,pager <F12> "<change-folder>+asi/inbox<enter>" "Go to asi inbox"
 
 # abook support
 macro generic,index,pager \Ca "<shell-escape>abook<return>" "launch abook"
@@ -119,3 +120,4 @@ source ~/.local/share/mutt/aliases
 folder-hook gmail/* source ~/.config/mutt/gmail.muttrc
 folder-hook kent/* source ~/.config/mutt/kent.muttrc
 folder-hook tlvince/* source ~/.config/mutt/tlvince.muttrc
+folder-hook asi/* source ~/.config/mutt/asi.muttrc
