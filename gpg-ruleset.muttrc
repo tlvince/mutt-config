@@ -5,4 +5,5 @@
 # http://comments.gmane.org/gmane.mail.mutt.user/33562
 send-hook . 'unset crypt_autoencrypt'
 send-hook '!~G ^%C gpg' 'set crypt_autoencrypt'
+# https://github.com/tlvince/scripts-python/blob/master/mutt-gpg-group.py
 source ~/src/py/scripts/mutt-gpg-group.py|
