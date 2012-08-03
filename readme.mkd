@@ -1,0 +1,5 @@
+# mutt-config
+
+Based heavily on work by [Patrick Brisbin][1].
+
+  [1]: https://github.com/pbrisbin/mutt-config
