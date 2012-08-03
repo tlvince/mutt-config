@@ -110,7 +110,7 @@ macro generic,index,pager \Ca "<shell-escape>abook<return>" "launch abook"
 macro index,pager         A   "<pipe-message>abook --add-email<return>" "add sender to abook"
 
 # Imports
-source ~/.config/mutt/lightr.muttrc
+source ~/.config/mutt/colour/lightr.muttrc
 source ~/.config/mutt/account/gmail.muttrc      # Gmail by default
 source ~/.config/mutt/gpg.muttrc
 source ~/.config/mutt/gpg-ruleset.muttrc
