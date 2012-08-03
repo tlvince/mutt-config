@@ -1,0 +1,8 @@
+# GPG ruleset configuration for mutt.
+# Copyright 2011-2012 Tom Vincent <http://tlvince.com/contact/>
+# vim: ft=muttrc tw=0 fdm=marker
+
+# http://comments.gmane.org/gmane.mail.mutt.user/33562
+send-hook . 'unset crypt_autoencrypt'
+send-hook '!~G ^%C gpg' 'set crypt_autoencrypt'
+source ~/src/py/scripts/mutt-gpg-group.py|
