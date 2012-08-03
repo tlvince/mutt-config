@@ -111,13 +111,13 @@ macro index,pager         A   "<pipe-message>abook --add-email<return>" "add sen
 
 # Imports
 source ~/.config/mutt/lightr.muttrc
-source ~/.config/mutt/gmail.muttrc      # Gmail by default
+source ~/.config/mutt/account/gmail.muttrc      # Gmail by default
 source ~/.config/mutt/gpg.muttrc
 source ~/.config/mutt/gpg-ruleset.muttrc
 source ~/.local/share/mutt/aliases
 
 # If mailbox is changed, load account specific settings
-folder-hook gmail/* source ~/.config/mutt/gmail.muttrc
-folder-hook kent/* source ~/.config/mutt/kent.muttrc
-folder-hook tlvince/* source ~/.config/mutt/tlvince.muttrc
-folder-hook asi/* source ~/.config/mutt/asi.muttrc
+folder-hook gmail/* source ~/.config/mutt/account/gmail.muttrc
+folder-hook kent/* source ~/.config/mutt/account/kent.muttrc
+folder-hook tlvince/* source ~/.config/mutt/account/tlvince.muttrc
+folder-hook asi/* source ~/.config/mutt/account/asi.muttrc
