@@ -103,9 +103,9 @@ macro index,pager <F12> "<change-folder>+asi/inbox<enter>" "Go to asi inbox"
 # Imports
 source ~/.config/mutt/colour/lightr.muttrc
 source ~/.config/mutt/account/gmail.muttrc      # Gmail by default
-source ~/.config/mutt/gpg.muttrc
-source ~/.config/mutt/gpg-ruleset.muttrc
-source ~/.config/mutt/gpg-ruleset-priv.muttrc
+source ~/.config/mutt/gpg/gpg.muttrc
+source ~/.config/mutt/gpg/gpg-ruleset.muttrc
+source ~/.config/mutt/gpg/gpg-ruleset-priv.muttrc
 source $alias_file
 
 # If mailbox is changed, load account specific settings
