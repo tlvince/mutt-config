@@ -4,9 +4,8 @@
   set mailcap_path        = ~/.config/mutt/mailcap              # mime handlers
   set alias_file          = ~/.local/share/mutt/aliases
   set ispell              = "aspell -e -c"                      # use aspell as ispell
-  set query_command       = "goobook query '%s'"           # query abook for contacts
   set mbox_type           = Maildir
-  set folder              = /home/tom/dwn/mail
+  set folder              = ~/dwn/mail
 
 # Main options
 unset confirmappend                                             # don't ask, just do
@@ -87,10 +86,6 @@ bind index K          previous-unread
 bind index J          next-unread
 bind index,pager R    group-reply
 
-bind editor <Tab>     complete-query    # Tab complete addresses
-bind editor ^T        complete          # Tab complete file names
-
-
 # macros
 macro index h   "c?" "view folders"
 macro index \Cr "<tag-pattern>all<enter><tag-prefix><clear-flag>N<untag-pattern>all<enter>" "mark all as read"
@@ -105,16 +100,12 @@ macro index,pager <F10> "<change-folder>+kent/inbox<enter>" "Go to Kent inbox"
 macro index,pager <F11> "<change-folder>+tlvince/inbox<enter>" "Go to tlvince inbox"
 macro index,pager <F12> "<change-folder>+asi/inbox<enter>" "Go to asi inbox"
 
-# abook support
-macro generic,index,pager \Ca "<shell-escape>abook<return>" "launch abook"
-macro index,pager         A   "<pipe-message>abook --add-email<return>" "add sender to abook"
-
 # Imports
 source ~/.config/mutt/colour/lightr.muttrc
 source ~/.config/mutt/account/gmail.muttrc      # Gmail by default
 source ~/.config/mutt/gpg.muttrc
 source ~/.config/mutt/gpg-ruleset.muttrc
-source ~/.local/share/mutt/aliases
+source $alias_file
 
 # If mailbox is changed, load account specific settings
 folder-hook gmail/* source ~/.config/mutt/account/gmail.muttrc
