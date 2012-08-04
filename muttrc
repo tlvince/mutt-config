@@ -105,6 +105,7 @@ source ~/.config/mutt/colour/lightr.muttrc
 source ~/.config/mutt/account/gmail.muttrc      # Gmail by default
 source ~/.config/mutt/gpg.muttrc
 source ~/.config/mutt/gpg-ruleset.muttrc
+source ~/.config/mutt/gpg-ruleset-priv.muttrc
 source $alias_file
 
 # If mailbox is changed, load account specific settings
