@@ -52,6 +52,8 @@ alternative_order text/plain text/enriched text/html            # but save it fo
   set fast_reply                                                # skip to compose when replying
   set forward_format      = "Fwd: %s"                           # format for subject when forwarding
   set forward_quote                                             # include message in forwards
+  set mime_forward        = yes                                 # include attachments when forwarding
+  set mime_forward_rest   = yes                                 # ""
   set include                                                   # include message in replies
   set realname            = "Tom Vincent"                       # who am i?
   set reply_to                                                  # reply to Reply-to: field, not From:
