@@ -1,4 +1,9 @@
-# Environment
+# muttrc {{{1
+# Copyright 2011 Patrick Brisbin <https://github.com/pbrisbin/mutt-config>
+# Copyright 2012 Tom Vincent <http://tlvince.com/contact>
+# vim: fdm=marker
+
+# Environment {{{1
   set header_cache        = ~/.cache/mutt/headers               # where to store headers
   set tmpdir              = ~/.cache/mutt/tmp                   # where to keep temp files
   set mailcap_path        = ~/.config/mutt/mailcap              # mime handlers
@@ -7,12 +12,12 @@
   set mbox_type           = Maildir
   set folder              = ~/dwn/mail
 
-# Main options
+# Main options {{{1
 unset confirmappend                                             # don't ask, just do
   set delete                                                    # don't ask, just do
 unset markers                                                   # no ugly plus signs
 unset mark_old                                                  # read/new is good enough for me
-unset move
+unset move                                                      # don't ask, just do!
   set menu_scroll                                               # scroll in menus
   set pager_index_lines   = 10                                  # number of index lines to show
   set pager_context       = 5                                   # number of context lines to show
@@ -25,13 +30,12 @@ unset sort_re                                                   # always thread
   set thorough_search                                           # strip headers and eval mimes before searching
   set thread_received                                           # sort threads by date received, not sent
   set tilde                                                     # show tildes like in vim
-
-  set sendmail_wait = -1    # Background sendmail without waiting
+  set sendmail_wait = -1                                        # Background sendmail without waiting
 # Enriched messages
 auto_view text/html                                             # view html automatically
 alternative_order text/plain text/enriched text/html            # but save it for last
 
-# formats and regexps
+# Formats and regexps {{{1
   set alias_format        = "%4n %t %-20a %r"
   set date_format         = "%m/%d/%y at %I:%M%P"
   set index_format        = "%3C %Z %[!%m/%d] %-17.17F %s"
@@ -39,7 +43,7 @@ alternative_order text/plain text/enriched text/html            # but save it fo
   set reply_regexp        = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
   set status_format       = "(%f %m%?n? [+%n]?%?d? [-%d]?%?t? [*%t]?)%?p?───(%p draft)?─%>─(%P)───"
 
-# composing mail
+# Compostion {{{1
   # Launch vim, moving to the first empty line and hard-wrapping lines at 72 columns
   set editor              = "vim -f -c 'set tw=72 spell' '+/^$' '+norm gwG' '+:noh'"
 
@@ -58,12 +62,12 @@ alternative_order text/plain text/enriched text/html            # but save it fo
   set realname            = "Tom Vincent"                       # who am i?
   set reply_to                                                  # reply to Reply-to: field, not From:
 
-# headers to show
+# Mail headers {{{1
 ignore *                                                        # ignore all headers
 unignore from: to: cc: date: subject:                           # show only these
 hdr_order from: to: cc: date: subject:                          # and in this order
 
-
+# Bindings {{{1
 # Unbind (noop special ubind function)
 bind index,pager \#   noop
 bind index,pager \&   noop
@@ -88,7 +92,7 @@ bind index K          previous-unread
 bind index J          next-unread
 bind index,pager R    group-reply
 
-# macros
+# Macros {{{1
 macro index h   "c?" "view folders"
 macro index \Cr "<tag-pattern>all<enter><tag-prefix><clear-flag>N<untag-pattern>all<enter>" "mark all as read"
 macro index B   "<limit>~b " "search message bodies"
@@ -102,7 +106,7 @@ macro index,pager <F10> "<change-folder>+kent/inbox<enter>" "Go to Kent inbox"
 macro index,pager <F11> "<change-folder>+tlvince/inbox<enter>" "Go to tlvince inbox"
 macro index,pager <F12> "<change-folder>+asi/inbox<enter>" "Go to asi inbox"
 
-# Imports
+# Imports {{{1
 source ~/.config/mutt/colour/solarized/mutt-colors-solarized-dark-16.muttrc
 source ~/.config/mutt/account/gmail.muttrc      # Gmail by default
 source ~/.config/mutt/gpg/gpg.muttrc
