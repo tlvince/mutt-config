@@ -41,9 +41,11 @@ alternative_order text/plain text/enriched text/html            # but save it fo
   set index_format        = "%3C %Z %[!%m/%d] %-17.17F %s"
   set quote_regexp        = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
   set reply_regexp        = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
-  set status_format       = "(%f %m%?n? [+%n]?%?d? [-%d]?%?t? [*%t]?)%?p?───(%p draft)?─%>─(%P)───"
 
-# Compostion {{{1
+  set status_chars  = " *%A"
+  set status_format = "[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p draft )?───"
+
+# Composition {{{1
   # Launch vim, moving to the first empty line and hard-wrapping lines at 72 columns
   set editor              = "vim -f -c 'set tw=72 spell' '+/^$' '+norm gwG' '+:noh'"
 
