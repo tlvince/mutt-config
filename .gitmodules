@@ -1,3 +1,6 @@
 [submodule "account"]
 	path = account
 	url = /home/tom/.config/mutt-account
+[submodule "colour/solarized"]
+	path = colour/solarized
+	url = https://github.com/altercation/mutt-colors-solarized.git

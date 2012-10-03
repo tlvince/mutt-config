@@ -103,7 +103,7 @@ macro index,pager <F11> "<change-folder>+tlvince/inbox<enter>" "Go to tlvince in
 macro index,pager <F12> "<change-folder>+asi/inbox<enter>" "Go to asi inbox"
 
 # Imports
-source ~/.config/mutt/colour/lightr.muttrc
+source ~/.config/mutt/colour/solarized/mutt-colors-solarized-dark-16.muttrc
 source ~/.config/mutt/account/gmail.muttrc      # Gmail by default
 source ~/.config/mutt/gpg/gpg.muttrc
 source ~/.config/mutt/gpg/gpg-ruleset.muttrc
