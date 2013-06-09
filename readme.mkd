@@ -5,6 +5,16 @@ Based heavily on work by [Patrick Brisbin][1].
 Accounts are included as a `git module` for privacy. See [an example][2] by
 Patrick if necessary.
 
+## Usage
+
+Run:
+
+    mkdir -p "$XDG_CACHE_HOME"/mutt/{headers,tmp}
+
+    data="$XDG_DATA_HOME/mutt"
+    mkdir -p "$data"
+    touch "$data/aliases"
+
 ## Author
 
 Copyright 2011-2012 Tom Vincent <http://tlvince.com/contact/>
