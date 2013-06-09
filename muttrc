@@ -4,10 +4,10 @@
 # vim: fdm=marker
 
 # Environment {{{1
-  set header_cache        = ~/.cache/mutt/headers               # where to store headers
-  set tmpdir              = ~/.cache/mutt/tmp                   # where to keep temp files
-  set mailcap_path        = ~/.config/mutt/mailcap              # mime handlers
-  set alias_file          = ~/.local/share/mutt/aliases
+  set header_cache        = "$XDG_CACHE_HOME/mutt/headers"               # where to store headers
+  set tmpdir              = "$XDG_CACHE_HOME/mutt/tmp"                   # where to keep temp files
+  set mailcap_path        = "$XDG_CONFIG_HOME/mutt/mailcap"              # mime handlers
+  set alias_file          = "$XDG_DATA_HOME/mutt/aliases"
   set ispell              = "aspell -e -c"                      # use aspell as ispell
   set mbox_type           = Maildir
   set folder              = ~/dwn/mail
