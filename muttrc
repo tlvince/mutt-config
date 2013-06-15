@@ -121,3 +121,4 @@ folder-hook gmail/* source ~/.config/mutt/account/gmail.muttrc
 folder-hook kent/* source ~/.config/mutt/account/kent.muttrc
 folder-hook tlvince/* source ~/.config/mutt/account/tlvince.muttrc
 folder-hook asi/* source ~/.config/mutt/account/asi.muttrc
+folder-hook pixls/* source ~/.config/mutt/account/pixls.muttrc
