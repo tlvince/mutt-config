@@ -101,7 +101,7 @@ macro index B   "<limit>~b " "search message bodies"
 macro index I   "<change-folder>!<enter>" "go to Inbox"
 macro index P   "<pipe-message>cat > ~/" "save message as"
 macro index Z   "<shell-escape>offlineimap -c ~/.config/offlineimap/offlineimap.conf -q -o<return>" "sync IMAP"
-macro attach s  "<save-entry><bol>~/dwn/unsorted/" "default attachments path"
+macro attach s  "<save-entry><bol>~/downloads/" "default attachments path"
 
 macro index,pager <F9> "<change-folder>+gmail/inbox<enter>" "Go to GMail inbox"
 macro index,pager <F10> "<change-folder>+kent/inbox<enter>" "Go to Kent inbox"
