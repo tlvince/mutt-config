@@ -1,7 +1,7 @@
 text/plain; $EDITOR %s
 text/html; links %s; nametemplate=%s.html
 text/html; links -dump %s; nametemplate=%s.html; copiousoutput
-application/pdf; zathura %s
-image/*; feh %s
-audio/*; mplayer %s
-video/*; mplayer %s
+application/pdf; open %s
+image/*; open %s
+audio/*; open %s
+video/*; open %s
