@@ -10,7 +10,7 @@
   set alias_file          = "$HOME/.mutt/aliases"
   set ispell              = "aspell -e -c"                      # use aspell as ispell
   set mbox_type           = Maildir
-  set folder              = "$HOME/.offlineimap/mail"
+  set folder              = "$HOME/.mail"
 
 # Main options {{{1
 unset confirmappend                                             # don't ask, just do
