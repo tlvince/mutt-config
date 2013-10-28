@@ -1,1 +1,3 @@
 gpg/gpg-ruleset-priv.muttrc
+headers
+tmp

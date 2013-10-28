@@ -4,13 +4,13 @@
 # vim: fdm=marker
 
 # Environment {{{1
-  set header_cache        = "$XDG_CACHE_HOME/mutt/headers"               # where to store headers
-  set tmpdir              = "$XDG_CACHE_HOME/mutt/tmp"                   # where to keep temp files
-  set mailcap_path        = "$XDG_CONFIG_HOME/mutt/mailcap"              # mime handlers
-  set alias_file          = "$XDG_DATA_HOME/mutt/aliases"
+  set header_cache        = "$HOME/.mutt/headers"               # where to store headers
+  set tmpdir              = "$HOME/.mutt/tmp"                   # where to keep temp files
+  set mailcap_path        = "$HOME/.mutt/mailcap"               # mime handlers
+  set alias_file          = "$HOME/.mutt/aliases"
   set ispell              = "aspell -e -c"                      # use aspell as ispell
   set mbox_type           = Maildir
-  set folder              = "$XDG_DATA_HOME/offlineimap/mail"
+  set folder              = "$HOME/.offlineimap/mail"
 
 # Main options {{{1
 unset confirmappend                                             # don't ask, just do
@@ -100,7 +100,7 @@ macro index \Cr "<tag-pattern>all<enter><tag-prefix><clear-flag>N<untag-pattern>
 macro index B   "<limit>~b " "search message bodies"
 macro index I   "<change-folder>!<enter>" "go to Inbox"
 macro index P   "<pipe-message>cat > ~/" "save message as"
-macro index Z   "<shell-escape>offlineimap -c ~/.config/offlineimap/offlineimap.conf -q -o<return>" "sync IMAP"
+macro index Z   "<shell-escape>offlineimap -c ~/.offlineimap/offlineimap.conf -q -o<return>" "sync IMAP"
 macro attach s  "<save-entry><bol>~/downloads/" "default attachments path"
 
 macro index,pager <F9> "<change-folder>+gmail/inbox<enter>" "Go to GMail inbox"
@@ -109,16 +109,16 @@ macro index,pager <F11> "<change-folder>+tlvince/inbox<enter>" "Go to tlvince in
 macro index,pager <F12> "<change-folder>+asi/inbox<enter>" "Go to asi inbox"
 
 # Imports {{{1
-source ~/.config/mutt/account/gmail.muttrc      # Gmail by default
-source ~/.config/mutt/gpg/gpg.muttrc
-source ~/.config/mutt/gpg/gpg-ruleset.muttrc
-source ~/.config/mutt/gpg/gpg-ruleset-priv.muttrc
+source ~/.mutt/account/gmail.muttrc      # Gmail by default
+source ~/.mutt/gpg/gpg.muttrc
+source ~/.mutt/gpg/gpg-ruleset.muttrc
+source ~/.mutt/gpg/gpg-ruleset-priv.muttrc
 source $alias_file
 
 # If mailbox is changed, load account specific settings
-folder-hook gmail/* source ~/.config/mutt/account/gmail.muttrc
-folder-hook kent/* source ~/.config/mutt/account/kent.muttrc
-folder-hook tlvince/* source ~/.config/mutt/account/tlvince.muttrc
-folder-hook asi/* source ~/.config/mutt/account/asi.muttrc
-folder-hook pixls/* source ~/.config/mutt/account/pixls.muttrc
-folder-hook onarrayhq/* source ~/.config/mutt/account/onarrayhq.muttrc
+folder-hook gmail/* source ~/.mutt/account/gmail.muttrc
+folder-hook kent/* source ~/.mutt/account/kent.muttrc
+folder-hook tlvince/* source ~/.mutt/account/tlvince.muttrc
+folder-hook asi/* source ~/.mutt/account/asi.muttrc
+folder-hook pixls/* source ~/.mutt/account/pixls.muttrc
+folder-hook onarrayhq/* source ~/.mutt/account/onarrayhq.muttrc
