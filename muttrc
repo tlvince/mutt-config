@@ -119,6 +119,5 @@ source $alias_file
 folder-hook gmail/* source ~/.mutt/account/gmail.muttrc
 folder-hook kent/* source ~/.mutt/account/kent.muttrc
 folder-hook tlvince/* source ~/.mutt/account/tlvince.muttrc
-folder-hook asi/* source ~/.mutt/account/asi.muttrc
 folder-hook pixls/* source ~/.mutt/account/pixls.muttrc
-folder-hook onarrayhq/* source ~/.mutt/account/onarrayhq.muttrc
+folder-hook onarray/* source ~/.mutt/account/onarray.muttrc
