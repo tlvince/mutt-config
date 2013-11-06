@@ -114,6 +114,7 @@ source ~/.mutt/gpg/gpg.muttrc
 source ~/.mutt/gpg/gpg-ruleset.muttrc
 source ~/.mutt/gpg/gpg-ruleset-priv.muttrc
 source $alias_file
+source ~/.mutt/mailboxes
 
 # If mailbox is changed, load account specific settings
 folder-hook gmail/* source ~/.mutt/account/gmail.muttrc
