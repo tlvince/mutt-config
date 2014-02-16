@@ -104,9 +104,8 @@ macro index Z   "<shell-escape>offlineimap -c ~/.offlineimap/offlineimap.conf -q
 macro attach s  "<save-entry><bol>~/downloads/" "default attachments path"
 
 macro index,pager <F9> "<change-folder>+gmail/inbox<enter>" "Go to GMail inbox"
-macro index,pager <F10> "<change-folder>+kent/inbox<enter>" "Go to Kent inbox"
-macro index,pager <F11> "<change-folder>+tlvince/inbox<enter>" "Go to tlvince inbox"
-macro index,pager <F12> "<change-folder>+asi/inbox<enter>" "Go to asi inbox"
+macro index,pager <F10> "<change-folder>+tlvince/inbox<enter>" "Go to tlvince inbox"
+macro index,pager <F12> "<change-folder>+onarray/inbox<enter>" "Go to onarray inbox"
 
 # Imports {{{1
 source ~/.mutt/account/gmail.muttrc      # Gmail by default
@@ -120,5 +119,4 @@ source ~/.mutt/mailboxes
 folder-hook gmail/* source ~/.mutt/account/gmail.muttrc
 folder-hook kent/* source ~/.mutt/account/kent.muttrc
 folder-hook tlvince/* source ~/.mutt/account/tlvince.muttrc
-folder-hook pixls/* source ~/.mutt/account/pixls.muttrc
 folder-hook onarray/* source ~/.mutt/account/onarray.muttrc
