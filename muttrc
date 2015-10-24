@@ -47,7 +47,7 @@ alternative_order text/plain text/enriched text/html            # but save it fo
 
 # Composition {{{1
   # Launch vim, moving to the first empty line and hard-wrapping lines at 72 columns
-  set editor              = "vim -f -c 'set tw=72 spell' '+/^$' '+norm gwG' '+:noh'"
+  set editor              = "nvim -f -c 'set tw=72 spell' '+/^$' '+norm gwG' '+:noh'"
 
   # http://wiki.mutt.org/?MuttFaq/Header
   set edit_headers                                              # show headers when composing
